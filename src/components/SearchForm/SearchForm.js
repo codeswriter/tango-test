@@ -2,7 +2,7 @@ import React from 'react';
 
 export const SearchForm = props => (
     <div className="col">
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={e => props.handleSubmit(e) }>
             <div className="form-row">
                 <div className="col-sm-4 my-1">
                     <div className="input-group">
