@@ -1,13 +1,13 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import { RepoRow} from './RepoRow';
 
-class ReposList extends PureComponent{
-    render(){
-        return (
-            <div>
-                Repos List
-            </div>
+export const ReposList = props => (
+    <div className="p-3 bg-white rounded shadow-sm">
+    <h6 className="border-bottom border-gray pb-2 mb-0">Repositories</h6>
+    {
+        props.repos.map(repo =>
+            <RepoRow key={repo.id} repo={repo} />
         )
     }
-}
-
-export default ReposList;
+</div>
+);

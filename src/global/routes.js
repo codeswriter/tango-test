@@ -8,7 +8,7 @@ export const Routes = () => (
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={MainPage} />
-            <Route exact path="/:user/repos" component={ReposPage} />
+            <Route exact path="/:userName/repos" component={ReposPage} />
             <Route exact path="*" component={NotFoundPage}/> 
         </Switch>
     </BrowserRouter>

@@ -13,11 +13,11 @@ class MainPage extends PureComponent {
     handleInputChange = e => {
         this.setState({
             userName: e.target.value
-        });
+        })
     }
 
     handleSubmit = e => {
-        e.preventDefault();
+        e.preventDefault()
 
         axios.get(`https://api.github.com/users/${this.state.userName.toLowerCase()}`)
             .then(res => {
@@ -25,12 +25,12 @@ class MainPage extends PureComponent {
             })
             .catch(err => {
                 this.setState({ errorUserName: this.state.userName, error: true });
-            });
+            })
     }
 
     render() {
         return (
-            <div className="container-fluid bg-content">
+            <main className="container-fluid bg-main-page">
                 {
                     this.state.error &&
                     <div className="alert alert-danger">User name <strong>{this.state.errorUserName}</strong> does not exists</div>
@@ -46,7 +46,7 @@ class MainPage extends PureComponent {
 
                     </div>
                 </div>
-            </div>
+            </main>
         )
     }
 }
