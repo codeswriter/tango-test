@@ -39,7 +39,7 @@ class ReposPage extends PureComponent {
                             <UserInfo user={this.state.user} />
                         </aside>
                         <section className="col-9">
-                           <ReposList repos={this.state.repos}/>
+                            <ReposList repos={this.state.repos} />
                         </section>
                     </div>
                 </main>
